@@ -1,0 +1,68 @@
+@import "compass/utilities/general/clearfix";
+.sh-ui-dialog-backdrop{
+	position:fixed;
+	left:0px;
+	width:100%;
+	top:0px;
+	height:100%;
+	background:rgba(0,0,0,0.5);
+}
+
+.sh-ui-dialog{
+	position:absolute;
+	max-width:100%;
+	top:50px;
+	width:90%;
+	margin:0px 5%;
+	z-index:9999999;
+
+	.sh-ui-dialog-titlebar{
+		@include clearfix;
+		background:rgba(0,0,0,0.8);
+		padding:10px 20px;
+		cursor:pointer;
+		color:#EEE;
+	}
+
+	.sh-ui-dialog-title{
+		float:left;
+	}
+
+	.sh-ui-dialog-content{
+		background:white;
+		padding:10px 20px;
+		font-size:12px;
+		line-height:1.5;
+	}
+
+	.sh-ui-dialog-close{
+		float:right;
+		cursor:pointer;
+	}
+
+	.sh-ui-dialog-footer{
+		padding:0px 20px;
+		background:white; 
+	}
+
+	.sh-ui-dialog-buttons{
+		@include clearfix;
+		border-top:1px solid #ccc;
+		padding:10px 0px;
+	}
+
+	.sh-ui-dialog-button{
+		display:inline-block;
+		padding:5px 10px;
+		font-size:12px;
+		cursor:pointer;
+		margin-right:2px;
+		background:rgba(0,0,0,0.8); 
+		color:#eee;
+	}
+
+}
+
+.sh-ui-dialog{
+
+}

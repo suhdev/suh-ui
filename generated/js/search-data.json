@@ -1,0 +1,44 @@
+[
+  {
+    "path": "api/SuhUi",
+    "titleWords": "SuhUi",
+    "keywords": "angularjs api apps components for html module of partials providing set suhui ui",
+    "members": ""
+  },
+  {
+    "path": "api/SuhUi/directive/shUiDialog",
+    "titleWords": "shUiDialog",
+    "keywords": "any api boxes create dialog directive example-example html module partials service shuidialog suhui to",
+    "members": ""
+  },
+  {
+    "path": "api/SuhUi/directive/shUiToast",
+    "titleWords": "shUiToast",
+    "keywords": "any api directive example-example1 html module notifications partials show shuitoast suhui to",
+    "members": ""
+  },
+  {
+    "path": "api/SuhUi/service/shDialog",
+    "titleWords": "shDialog",
+    "keywords": "api box dialog factory for html module partials provides service shdialog suhui the unified user",
+    "members": "answer buttons content data reset show templateurl title"
+  },
+  {
+    "path": "api/SuhUi/service/shToast",
+    "titleWords": "shToast",
+    "keywords": "api factory html module notification partials provide provides service shtoast suhui to toaster",
+    "members": "toast"
+  },
+  {
+    "path": "api/SuhUi/directive",
+    "titleWords": "directive components in SuhUi",
+    "keywords": "api componentgroup components directive html in module partials suhui",
+    "members": ""
+  },
+  {
+    "path": "api/SuhUi/service",
+    "titleWords": "service components in SuhUi",
+    "keywords": "api componentgroup components html in module partials service suhui",
+    "members": ""
+  }
+]

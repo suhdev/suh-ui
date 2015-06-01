@@ -1,0 +1,6 @@
+<div class="sh-ui-toast-container" data-toast-vertical="top" data-toast-horizontal="right">
+	<div ng-repeat="toast in toastCtrl.toasts" class="sh-ui-toast" ng-click="toastCtrl.remove(toast)">
+		<i class="fa fa-fw fa-spinner fa-spin" ng-show="toast.progress"></i> <span ng-bind="toast.text"></span>
+		<span class="sh-ui-toast-action" ng-click="toast.action.callback(toast)" ng-if="toast.action" ng-bind="toast.action.label || 'Undo'"></span>
+	</div>
+</div>

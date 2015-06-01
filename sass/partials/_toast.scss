@@ -1,0 +1,76 @@
+$toast-min-width:400px;
+$toast-margin:50px;
+
+.sh-ui-toast-container{
+	display:block;
+	position:fixed;
+	width:$toast-min-width;
+	max-width:100%;
+}
+
+.sh-ui-toast-container[data-toast-vertical="top"]{
+	top:$toast-margin;
+}
+
+.sh-ui-toast-container[data-toast-vertical="bottom"]{
+	bottom:$toast-margin;
+}
+
+.sh-ui-toast-container[data-toast-horizontal="left"]{
+	left:$toast-margin;
+}
+
+.sh-ui-toast-container[data-toast-horizontal="right"]{
+	right:$toast-margin;
+}
+
+.sh-ui-toast-container[data-toast-vertical="center"],
+.sh-ui-toast-container[data-toast-vertical="middle"]{
+  
+}
+
+.sh-ui-toast-container[data-toast-horizontal="center"],
+.sh-ui-toast-container[data-toast-horizontal="middle"]{
+	
+}
+
+.sh-ui-toast{
+	padding:10px 20px;
+	margin:2px 0px;
+	color:#EEE;
+	font-size:12px;
+	cursor:pointer;
+	background:rgba(0,0,0,0.8);
+	font-weight:300;
+
+	.sh-ui-toast-action{
+		cursor:pointer;
+		color:#F66;
+		float:right;
+		margin:-10px -20px -10px 0px;
+		padding:10px 20px;
+	}
+}
+
+
+.sh-ui-toast.ng-enter,
+.sh-ui-toast.ng-move,
+.sh-ui-toast.ng-leave{
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.sh-ui-toast.ng-leave.ng-leave-active,
+.sh-ui-toast.ng-move,
+.sh-ui-toast.ng-enter {
+  opacity:0;
+  max-height:0;
+}
+
+.sh-ui-toast.ng-leave,
+.sh-ui-toast.ng-move.ng-move-active,
+.sh-ui-toast.ng-enter.ng-enter-active {
+  opacity:1;
+  max-height:40px;
+}

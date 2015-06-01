@@ -1,0 +1,21 @@
+<div class="sh-ui-dialog-container" ng-show="dialogCtrl.visible">
+	<div class="sh-ui-dialog-backdrop"></div>
+	<div class="sh-ui-dialog" ng-style="dialogCtrl.style">
+		<div class="sh-ui-dialog-titlebar">
+			<div class="sh-ui-dialog-title" ng-bind="dialogCtrl.title"></div>
+			<span class="sh-ui-dialog-close" ng-click="dialogCtrl.close()"><i class="fa fa-times fa-lg"></i></span>
+		</div>
+		<div class="sh-ui-dialog-toolbar" ng-if="dialogCtrl.hasToolbar()">
+			
+		</div>
+		<div class="sh-ui-dialog-content">
+			<div ng-include="dialogCtrl.templateUrl" scope="false" onload="dialogCtrl.onTemplateLoad()" ng-if="dialogCtrl.hasTemplateUrl"></div>
+			<div ng-bind="dialogCtrl.content"></div>
+		</div>
+		<div class="sh-ui-dialog-footer">
+			<div class="sh-ui-dialog-buttons" ng-if="dialogCtrl.hasButtons()">
+				<div class="sh-ui-dialog-button" ng-repeat="button in dialogCtrl.buttons" ng-click="dialogCtrl.answer($index,button)" ng-bind="button.label || button"></div>
+			</div>
+		</div>
+	</div>
+</div>

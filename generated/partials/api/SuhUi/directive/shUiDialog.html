@@ -1,0 +1,135 @@
+
+
+<a href='https://github.com///tree//../suh-ui.js#L9' class='view-source pull-right uk-button uk-button-primary'>
+  <i class="glyphicon glyphicon-zoom-in">&nbsp;</i>View Source
+</a>
+
+
+<div class="uk-block uk-block-primary uk-contrast ngdocs-header-block">
+  <div class="uk-container">
+    <h1 class="ngdocs-header-block-heading">shUiDialog</h1>
+    <header class="api-profile-header">
+      <ol class="uk-list">
+        
+        <li>
+          directive in module <a href="api/SuhUi">SuhUi</a>
+        </li>
+      </ol>
+    </header>
+    <p>
+    
+    </p>
+  </div>
+</div>
+
+
+
+<p class="api-profile-description">
+  <p>A service to create dialog boxes.</p>
+
+</p>
+
+
+
+<div>
+  
+
+  
+  <h2>Directive Info</h2>
+  <ul>
+    
+    <li>This directive executes at priority level 0.</li>
+  </ul>
+
+  
+  <h2 id="usage">Usage</h2>
+  <div class="usage">
+  
+    <ul class="uk-list">
+    <li>as attribute:
+        <pre><code>&lt;ANY&gt;&#10;...&#10;&lt;/ANY&gt;</code></pre>
+      </li>
+    
+  </div>
+  
+  
+
+
+  
+  
+  <h2 id="example">Example</h2><p>
+
+
+<div class="runnable-examplex"
+    path="examples/example-example"
+    module="Suhail"
+    deps="angular-animate.min.js;suh-ui.js;suh-general.min.js"
+    animation="true">
+    
+<!-- This is the container of the content items -->
+  <ul class="uk-tab" data-uk-tab data-uk-switcher="{connect:'#example-id'}">
+    
+      <li 
+      name="index.html"
+      language="html"
+      type="html"><a href="">index.html</a></li>
+    
+      <li 
+      name="script.js"
+      language="js"
+      type="js"><a href="">script.js</a></li>
+    
+  </ul>
+  <ul id="example-id" class="uk-switcher example-files">
+  
+      <li 
+      name="index.html"
+      language="html"
+      type="html">
+        <pre><code>&lt;div class=&quot;container&quot; &gt;&#10;  &lt;div ng-controller=&quot;TestCtrl as ctrl&quot; &gt;&#10;    &lt;button ng-click=&quot;ctrl.showDialog()&quot;&gt;Show&lt;/button&gt;&#10;    &lt;button ng-click=&quot;ctrl.showDialogWithTemplate()&quot;&gt;Show with template&lt;/button&gt;&#10;  &lt;/div&gt; &#10;&lt;/div&gt;&#10;&lt;div sh-ui-dialog&gt;&#10;&lt;/div&gt;</code></pre>
+      </li>
+  
+      <li 
+      name="script.js"
+      language="js"
+      type="js">
+        <pre><code> angular.module(&#39;Suhail&#39;,[&#39;SuhUi&#39;,&#39;ngAnimate&#39;])&#10; &#9;.config([&#39;shTemplatePathProcessorProvider&#39;,function(PT){&#10;&#10; &#9;}])&#10;    .controller(&#39;TestCtrl&#39;,[&#39;$scope&#39;,&#39;shDialog&#39;,function($S,_T){&#10;&#9;this.showDialog = function(){&#10;&#9;&#9;_T.title(&#39;Suhail&#39;)&#10;&#9;&#9;&#9;&#9;.content(&#39;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate repellendus molestiae iusto minus, magnam tempore minima dicta dolorem quidem in? Dolores non, dignissimos reiciendis est, illum amet fuga neque placeat.&#39;)&#10;&#9;&#9;&#9;&#9;.buttons([{label:&#39;Okay&#39;,action:function(){console.log(&#39;okay&#39;);}},&#39;Cancel&#39;])&#10;&#9;&#9;&#9;&#9;.show()&#10;&#9;&#9;&#9;&#9;.then(function(e){&#10;&#9;&#9;&#9;&#9;&#9;console.log(e);&#10;&#9;&#9;&#9;&#9;},function(e){&#10;console.log(e);&#10;&#9;&#9;&#9;&#9;}); &#10;&#9;&#9;&#10;&#9;};&#10;&#10;&#9;this.showDialogWithTemplate = function(){&#10;&#9;&#9;_T.title(&#39;Suhail&#39;)&#10;&#9;&#9;&#9;.templateUrl(&#39;/temp.html&#39;)&#10;&#9;&#9;&#9;.data({&#10;&#9;&#9;&#9;&#9;name:&#39;Suhail&#39;,&#10;&#9;&#9;&#9;&#9;age:&#39;27&#39;&#10;&#9;&#9;&#9;})&#10;&#9;&#9;&#9;.show(); &#10;&#9;};&#10;    }]);</code></pre>
+      </li>
+  
+  </ul>
+  <div class="runnable-example-filex" >
+
+    
+  </div>
+
+  <iframe class="runnable-example-frame" src="examples/example-example/index.html" name="example-example"></iframe>
+</div>
+<script>
+$(document).ready(function(){
+  var s = $('[data-uk-switcher]');
+  UIkit.switcher(s,UIkit.Utils.options(s.attr('data-uk-switcher')));
+  // s = $('.uk-tab');
+  // UIkit.tab(s);
+});
+</script>
+
+
+
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="ngdocs-object-notes">
+
+</div>
+
+
+<a href='https://github.com/angular/angular.js/edit//../suh-ui.js?message=docs(shUiDialog)%3A%20describe%20your%20change...#L9' class='improve-docs uk-badge-primary uk-badge'><i class="glyphicon glyphicon-edit">&nbsp;</i>Improve this Doc</a>
+<a href='https://github.com///tree//../suh-ui.js#L9' class='view-source pull-right uk-badge uk-badge-primary'>
+  <i class="glyphicon glyphicon-zoom-in">&nbsp;</i>View Source
+</a>

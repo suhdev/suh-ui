@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-example-production</title>
+  
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0/angular-animate.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0/suh-ui.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0/suh-general.min.js"></script>
+  <script src="script.js"></script>
+  
+
+  
+</head>
+<body ng-app="Suhail">
+  <div class="container" >
+  <div ng-controller="TestCtrl as ctrl" >
+    <button ng-click="ctrl.showDialog()">Show</button>
+    <button ng-click="ctrl.showDialogWithTemplate()">Show with template</button>
+  </div> 
+</div>
+<div sh-ui-dialog>
+</div>
+   
+</body>
+</html>

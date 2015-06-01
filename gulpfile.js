@@ -20,6 +20,7 @@ gulp.task('jshint',function(){
 		.pipe(jshint.reporter(stylish))
 });
 
+
 gulp.task('concat-js',['jshint'],function(){
 	return gulp.src(PATHS.JS.SRC)
 	  .pipe(concat('suh-ui.js'))
@@ -37,6 +38,11 @@ gulp.task('docs',['concat-js'],function(){
 		meta:{
 			description:'This is just a test suite'
 		},
+		examples:{
+			commonFiles:{
+				stylesheets:['../../css/screen.css','../../css/font-awesome.min.css']
+			}
+		},
 		navigation:{
 			top:{
 				navItems:[{
@@ -45,17 +51,11 @@ gulp.task('docs',['concat-js'],function(){
           		{
 		            type:'dropdown',
 		            disabled:true,
-		            label:'TestModule Documentation',
+		            label:'SuhExternal Documentation',
 		            url:'#',
 		            menu:[{
 			              	label:'API Reference',
 			              	url:'api'
-			            },{
-			              	label:'Guides',
-			              	url:'guide'
-			            },{
-			            	label:'Suhail',
-			            	url:'suhail'
 			            }
 			        ]
           		},
@@ -64,20 +64,21 @@ gulp.task('docs',['concat-js'],function(){
           		}]
 			}
 		},
-		scripts:[path.resolve('./suh-external.min.js')]
+		scripts:[path.resolve('./bower_components/suh-general/suh-general.min.js'),path.resolve('./suh-ui.js')]
 	},
+	includeCss:[path.resolve('./stylesheets/screen.css')],
 	basePath:path.resolve('src'),
 	scripts:[],
-	stylesheets:[],
+	stylesheets:[path.resolve('./stylesheets/screen.css')],
 	fonts:[],
-	sourceFiles:[path.resolve('./suh-external.js')],
+	sourceFiles:[path.resolve('./suh-ui.js')],
 	AREA_NAMES:{
 		suhail:'Suhail Abood',
 	},
 	outputFolder:path.resolve('generated'),
 	homePage:{
 		data:{
-			title:'Suhail Abood Library',
+			title:'SuhExternal Angular Module',
 			description:'A library to do something.',
 			dependencies:[{
 				name:'angular',
@@ -96,8 +97,8 @@ gulp.task('docs',['concat-js'],function(){
 		name:'Suhail Abood',
 		module:{
 			version:'v1.0.0',
-			file:'suh-external.js',
-			minifiedFile:'suh-external.min.js'
+			file:'suh-ui.js',
+			minifiedFile:'suh-ui.min.js'
 		}
 	}
 });
@@ -107,7 +108,7 @@ gulp.task('docs',['concat-js'],function(){
 });
 
 gulp.task('watch',['concat-js'],function(){
-	return gulp.watch(PATHS.JS.SRC,['concat-js','docs']);
+	return gulp.watch(['./src/*.js','./src/**/*.js','stylesheets/*.css'],['concat-js','docs']);
 });
 
 gulp.task('default',['watch'],function(){

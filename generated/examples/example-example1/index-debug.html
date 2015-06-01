@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-example1-debug</title>
+  
+
+  <script src="../../../angular.js"></script>
+  <script src="../../../angular-animate.min.js"></script>
+  <script src="../../../suh-ui.js"></script>
+  <script src="../../../suh-general.min.js"></script>
+  <script src="script.js"></script>
+  
+
+  
+</head>
+<body ng-app="Suhail">
+  <div class="container" >
+  <div ng-controller="TestCtrl as ctrl" >
+    <button ng-click="ctrl.showToast()">Show</button>
+    <button ng-click="ctrl.showToastWithAction()">Show with Action</button>
+    <button ng-click="ctrl.showToastWithAction(true)">Show with Progress</button>
+  </div> 
+</div>
+<div sh-ui-toast>
+</div>
+   
+</body>
+</html>
